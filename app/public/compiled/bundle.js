@@ -8901,7 +8901,7 @@
 	  data: {
 	    rooms: [{
 	      name: 'general',
-	      messages: []
+	      messages: ['test']
 	    }, {
 	      name: 'private',
 	      messages: []

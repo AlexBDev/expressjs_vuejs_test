@@ -12,15 +12,13 @@ var vm = new Vue({
     rooms: [
       {
         name: 'general',
-        messages: ['test']
+        messages: []
       },
       {
         name: 'private',
         messages: []
       }
     ],
-    message: '',
-    listMessages: []
   },
   sockets:{
     connect: function(){

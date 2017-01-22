@@ -15,7 +15,9 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "style-loader": "^0.13.1"
+    "socket.io": "^1.7.2",
+    "style-loader": "^0.13.1",
+    "vue-socket.io": "^2.1.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

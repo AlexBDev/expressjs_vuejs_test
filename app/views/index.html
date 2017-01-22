@@ -2,9 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Vue.JS + ExpressJS</title>
+    <title><%= title %></title>
   </head>
   <body>
+    <div id="chat">
+      <ul style="background-color: #c2c1c1; height: 300px; width: 60%">
+
+      </ul>
+      <input type="text" name="chat-message" placeholder="Enter your message"
+        v-on:keyup.enter="sendMessage" v-model="message">
+    </div>
+
     <div id="app-7">
       <ol>
         <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>

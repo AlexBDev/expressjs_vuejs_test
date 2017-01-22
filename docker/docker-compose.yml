@@ -7,3 +7,5 @@ services:
       - ../app:/app:rw
     ports:
       - 3200:3200
+    env:
+      - PORT=3200

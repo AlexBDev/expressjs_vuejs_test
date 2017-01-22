@@ -8897,8 +8897,6 @@
 	groceries.addGrocery(new _Grocery2.default('Cheese'));
 	groceries.addGrocery(new _Grocery2.default('Potatoes'));
 
-	console.log(groceries.getGroceries());
-
 	var app7 = new _vue2.default({
 	  el: '#app-7',
 	  data: {

@@ -6,8 +6,9 @@
   </head>
   <body>
     <div id="chat">
-      <ul style="background-color: #c2c1c1; height: 300px; width: 60%">
-        <li v-for="item in listMessages">
+      <ul style="background-color: #c2c1c1; height: 300px; width: 60%" v-for="room in rooms">
+        {{ room.name }}
+        <li v-for="item in room.messages">
           {{ item }}
         </li>
       </ul>

@@ -8899,6 +8899,13 @@
 	var vm = new _vue2.default({
 	  el: "#chat",
 	  data: {
+	    rooms: [{
+	      name: 'general',
+	      messages: []
+	    }, {
+	      name: 'private',
+	      messages: []
+	    }],
 	    message: '',
 	    listMessages: []
 	  },

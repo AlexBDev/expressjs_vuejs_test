@@ -9,6 +9,16 @@ var a = Vue.use(VueSocketio, 'http://localhost:1923');
 var vm = new Vue({
   el : "#chat",
   data: {
+    rooms: [
+      {
+        name: 'general',
+        messages: ['test']
+      },
+      {
+        name: 'private',
+        messages: []
+      }
+    ],
     message: '',
     listMessages: []
   },

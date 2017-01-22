@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var app = express();
 var http = require('http');
 var io = require('socket.io')(1923);
+var secureStr = require('secure-random-string');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,11 +29,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+
 io.on('connection', function (socket) {
-  console.log(socket);
-  socket.emit('news', { hello: 'world' });
+  var privateRoom = secureStr({length: 32});
+  
+  socket.emit('newMessageEmit', 'Your private room is : ' + privateRoom);
   socket.on('my other event', function (data) {
     console.log(data);
+    io.emit('newMessageEmit', data);
   });
 });
 

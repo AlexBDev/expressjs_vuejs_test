@@ -8899,14 +8899,16 @@
 	var vm = new _vue2.default({
 	  el: "#chat",
 	  data: {
-	    message: ''
+	    message: '',
+	    listMessages: []
 	  },
 	  sockets: {
 	    connect: function connect() {
 	      console.log('socket connected');
 	    },
-	    customEmit: function customEmit(val) {
-	      console.log('this method fired by socket server. eg: io.emit("customEmit", data)');
+	    newMessageEmit: function newMessageEmit(val) {
+	      console.log(val);
+	      this.listMessages.push(val);
 	    }
 	  },
 	  methods: {

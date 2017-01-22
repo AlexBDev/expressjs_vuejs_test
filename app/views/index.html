@@ -7,7 +7,9 @@
   <body>
     <div id="chat">
       <ul style="background-color: #c2c1c1; height: 300px; width: 60%">
-
+        <li v-for="item in listMessages">
+          {{ item }}
+        </li>
       </ul>
       <input type="text" name="chat-message" placeholder="Enter your message"
         v-on:keyup.enter="sendMessage" v-model="message">

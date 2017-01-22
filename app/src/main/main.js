@@ -18,7 +18,7 @@ var vm = new Vue({
     },
     newMessageEmit: function(val){
       console.log(val);
-
+      this.listMessages.push(val);
     }
   },
   methods: {
